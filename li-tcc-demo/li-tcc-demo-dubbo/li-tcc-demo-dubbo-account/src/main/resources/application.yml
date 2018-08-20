@@ -1,0 +1,54 @@
+server:
+  port: 8085
+  context-path: /
+  address: localhost
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://mysql-dev:3306/tcc_account?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+li:
+  tcc:
+    serializer: kryo
+    recover-delay-time: 128
+    retry-max: 30
+    scheduled-delay: 128
+    scheduled-thread-max: 10
+    repository-support: db
+    tcc-db-config:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://mysql-dev:3306/tcc?useUnicode=true&amp;characterEncoding=utf8
+      username: root
+      password: root
+       # repository-support : redis
+       #         host-name  : redis-dev
+       #         port      :  6379
+
+       # repository-support : zookeeper
+       #         host      : zookeeper-dev:2181
+       #         session-time-out      :  100000
+       #         root-path  : /tcc
+
+       # repository-support : mongodb
+       #       mongo-db-url  : mongodb-dev:27017
+       #       mongo-db-name  :  tcc
+       #       mongo-user-name  : root
+       #       mongo-user-pwd   : root
+
+       # repository-support : file
+       #         path      : /account
+       #         prefix    :  account
+mybatis:
+  type-aliases-package: com.li.tcc.demo.dubbo.account.api.entity
+  config-location: classpath:mybatis/mybatis-config.xml
+logging:
+  level:
+    root: error
+    org.springframework.web: info
+    org.apache.ibatis: info
+    com.li.tcc.bonuspoint: info
+    com.li.tcc.lottery: debug
+    com.li.tcc: debug
+    io.netty: info
+  path: /logs/li-tcc-demo-dubbo-account

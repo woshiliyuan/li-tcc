@@ -1,0 +1,4 @@
+com.li.tcc.common.serializer.KryoSerializer
+com.li.tcc.common.serializer.ProtostuffSerializer
+com.li.tcc.common.serializer.HessianSerializer
+com.li.tcc.common.serializer.JavaSerializer

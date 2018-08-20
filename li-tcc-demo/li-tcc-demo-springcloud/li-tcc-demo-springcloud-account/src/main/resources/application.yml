@@ -1,0 +1,42 @@
+server:
+  port: 8882
+  address: localhost
+  servlet:
+    context-path: /account-service
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://mysql-dev:3306/tcc_account?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+  application:
+    name: account-service
+li:
+  tcc:
+    serializer: kryo
+    recover-delay-time: 128
+    retry-max: 30
+    scheduled-delay: 128
+    scheduled-thread-max: 10
+    repository-support: db
+    tcc-db-config:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://mysql-dev:3306/tcc?useUnicode=true&amp;characterEncoding=utf8
+      username: root
+      password: root
+mybatis:
+  type-aliases-package: com.li.tcc.demo.springcloud.account.entity
+  config-location: classpath:mybatis/mybatis-config.xml
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+account-service:
+  ribbon.NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+logging:
+  level:
+    root: info
+    com.li.tcc: debug
+  path: /logs/li-tcc-demo-springcloud-account

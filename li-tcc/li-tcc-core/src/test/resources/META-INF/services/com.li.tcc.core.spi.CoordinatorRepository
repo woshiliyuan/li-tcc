@@ -1,0 +1,5 @@
+com.li.tcc.core.spi.repository.JdbcCoordinatorRepository
+com.li.tcc.core.spi.repository.FileCoordinatorRepository
+com.li.tcc.core.spi.repository.MongoCoordinatorRepository
+com.li.tcc.core.spi.repository.RedisCoordinatorRepository
+com.li.tcc.core.spi.repository.ZookeeperCoordinatorRepository

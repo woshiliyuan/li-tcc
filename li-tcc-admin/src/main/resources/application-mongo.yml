@@ -1,0 +1,6 @@
+compensation:
+   mongo :
+      url : mongodb-dev:27017
+      dbName : tcc
+      userName : root
+      password : root

@@ -1,0 +1,4 @@
+compensation:
+   zookeeper:
+      host : zookeeper-dev:2181
+      sessionTimeOut : 3000

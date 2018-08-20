@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>li-tcc-spring-boot-starter</artifactId>
+		<groupId>com.li.tcc</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>li-tcc-spring-boot-starter-springcloud</artifactId>
+	<name>li-tcc-spring-boot-starter-springcloud</name>
+	<!-- FIXME change it to the project's website -->
+	<url>http://www.example.com</url>
+	<dependencies>
+		<dependency>
+			<groupId>com.li.tcc</groupId>
+			<artifactId>li-tcc-spring-boot-starter-parent</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.li.tcc</groupId>
+			<artifactId>li-tcc-springcloud</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>li-tcc-spring-boot-starter-springcloud</finalName>
+	</build>
+</project>

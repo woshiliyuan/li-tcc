@@ -1,0 +1,5 @@
+compensation:
+   redis:
+      cluster: false
+      hostName : redis-dev
+      port : 6379

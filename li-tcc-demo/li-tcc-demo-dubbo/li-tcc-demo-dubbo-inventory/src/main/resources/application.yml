@@ -1,0 +1,25 @@
+server:
+  port: 8084
+  context-path: /
+  address: localhost
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://mysql-dev:3306/tcc_stock?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+    
+mybatis:
+  type-aliases-package: com.li.tcc.demo.dubbo.inventory.api.entity
+  config-location: classpath:mybatis/mybatis-config.xml
+  
+logging:
+  level:
+    root: error
+    org.springframework.web: info
+    org.apache.ibatis: info
+    com.li.bonuspoint: info
+    com.li.lottery: debug
+    com.li: debug
+    io.netty: info
+  path: /logs/li-tcc-demo-dubbo-inventory

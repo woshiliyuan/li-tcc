@@ -1,0 +1,29 @@
+server:
+  port: 8761
+spring:
+  application:
+    name: springcloud-eureka
+eureka:
+  instance:
+    hostname: ${hostname:localhost}
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 2
+    lease-expiration-duration-in-seconds: 6
+  server:
+    peer-eureka-nodes-update-interval-ms: 60000
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 5000
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    eureka-service-url-poll-interval-seconds: 60
+endpoints:
+  health:
+    sensitive: false
+logging:
+  level:
+    root: info
+    com.li.tcc: debug
+  path: /logs/li-tcc-demo-springcloud-eureka

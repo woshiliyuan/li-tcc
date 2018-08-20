@@ -1,0 +1,23 @@
+server:
+  port: 8083
+  context-path: /
+  address: localhost
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://mysql-dev:3306/tcc_order?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+mybatis:
+  type-aliases-package: com.li.tcc.demo.dubbo.order.entity
+  config-location: classpath:mybatis/mybatis-config.xml
+logging:
+  level:
+    root: error
+    org.springframework.web: info
+    org.apache.ibatis: info
+    com.li.bonuspoint: debug
+    com.li.lottery: debug
+    com.li: debug
+    io.netty: info
+  path: /logs/li-tcc-demo-dubbo-order
